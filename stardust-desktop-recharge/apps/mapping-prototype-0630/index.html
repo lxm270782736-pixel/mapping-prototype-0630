@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
@@ -2529,7 +2529,7 @@
       </div>
       <div class="segmented" id="entryMode">
         <button class="active" data-entry="direct">直接打开</button>
-        <button data-entry="recharge">自动回充</button>
+        <button data-entry="recharge">回充设置</button>
         <button data-entry="guide">导览</button>
         <button data-entry="empty">无地图</button>
       </div>
@@ -2661,7 +2661,7 @@
     <div class="scrim" data-close-edit-save></div>
     <div class="modal-card">
       <h3>保存编辑</h3>
-      <p>保存后会覆盖当前地图文件，自动回充和导览等业务 App 后续会读取这份编辑后的地图。</p>
+      <p>保存后会覆盖当前地图文件，回充设置和导览等业务 App 后续会读取这份编辑后的地图。</p>
       <div class="actions" style="justify-content:flex-end;">
         <button class="btn" data-close-edit-save>取消</button>
         <button class="btn primary" id="confirmEditSave">确认保存</button>
@@ -2756,7 +2756,7 @@
         size: "31m x 22m",
         resolution: "0.05m",
         source: "",
-        usedBy: ["自动回充 App"],
+        usedBy: ["回充设置"],
       },
       {
         id: "map-warehouse-old",
@@ -2997,7 +2997,7 @@
     }
 
     function sourceLabel() {
-      if (entryMode === "recharge") return "自动回充 App";
+      if (entryMode === "recharge") return "回充设置";
       if (entryMode === "guide") return "导览 App";
       if (entryMode === "empty") return "来源 App";
       return "建图 App";
@@ -3054,8 +3054,8 @@
         },
         recharge: {
           title: "选择地图",
-          hint: "选择一张地图给自动回充 App 使用，也可以新建地图。",
-          entry: "自动回充 App 需要一张地图继续设置。",
+          hint: "选择一张地图给回充设置使用，也可以新建地图。",
+          entry: "回充设置需要一张地图继续设置。",
         },
         guide: {
           title: "选择地图",
@@ -6602,3 +6602,5 @@
   </script>
 </body>
 </html>
+
+
